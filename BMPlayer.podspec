@@ -26,7 +26,7 @@ end
 
 s.subspec 'Full' do |full|
     full.source_files = 'Source/*.swift','Source/Default/*'
-    full.resources_bundles = {
+    full.resource_bundles = {
         'Source' => "Source/**/*.xcassets"
         }
     full.frameworks   = 'UIKit', 'AVFoundation'
@@ -38,7 +38,7 @@ end
 
 s.subspec 'CacheSupport' do |cache|
     cache.source_files = 'Source/*.swift','Source/CacheSupport/*'
-    cache.resources_bundles = {
+    cache.resource_bundles = {
         'Source' => "Source/**/*.xcassets"
         }
     cache.frameworks   = 'UIKit', 'AVFoundation'
