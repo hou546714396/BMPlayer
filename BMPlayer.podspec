@@ -26,7 +26,9 @@ end
 
 s.subspec 'Full' do |full|
     full.source_files = 'Source/*.swift','Source/Default/*'
-    full.resources    = "Source/**/*.xcassets"
+    full.resources_bundles = {
+        'Source' => "Source/**/*.xcassets"
+        }
     full.frameworks   = 'UIKit', 'AVFoundation'
 
     full.dependency 'BMPlayer/Core'
@@ -36,7 +38,9 @@ end
 
 s.subspec 'CacheSupport' do |cache|
     cache.source_files = 'Source/*.swift','Source/CacheSupport/*'
-    cache.resources    = "Source/**/*.xcassets"
+    cache.resources_bundles = {
+        'Source' => "Source/**/*.xcassets"
+        }
     cache.frameworks   = 'UIKit', 'AVFoundation'
 
     cache.dependency 'BMPlayer/Core'
